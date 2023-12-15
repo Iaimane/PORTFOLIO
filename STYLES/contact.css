@@ -1,0 +1,301 @@
+*{/*selecteur universel définit le style global sur l'intégralité de la page peu importe le navigateur*/
+    margin: 0; /*marge extérieure de la boîte*/
+    padding: 0; /*marge intérieure de la boîte*/
+    box-sizing: border-box; /* indique que l'on va inclure les marges internes et bordure dans la taille des parents*/
+  
+}  
+
+header,footer{
+    font-family: 'Merienda', cursive;
+}
+body{
+    font-family: poppins;
+}
+
+.parallax{
+    background-image: url("../IMAGES/cherryFlower.png") /*défini mon image de fond*/;
+    height: 100%;/*permet de dire de remplir 100% du conteneur ici le body*/
+    background-attachment: fixed;/*fixe l'image au moment du scroll*/
+    background-position: center;/*centre l'image*/
+    background-repeat: no-repeat;/*empêche la répétition de l'image*/
+    background-size: cover;/*redimensionne l'image  pour couvrir l'intégralité de l'élément*/
+}
+
+/*------------------------HEADER--------------------*/
+.logo{
+    width: 6em;
+    height: 6em;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: #DC6023;
+}
+
+nav ul li{ /*acting directly and only on these elements not the box*/
+    display: inline;
+    margin-right: 50px; /*space between my links*/
+    margin-left: 50px;
+    
+}
+.navBar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;    
+    padding: 20px;
+}
+
+.links{
+    margin: 0px 0px 20px 160px; /*margin between my logo and the links to create a space between them*/
+}
+
+/*----------BURGER MENU----------*/
+.burgerMenu{
+    position: fixed;
+    width: 0px;
+    display: none;
+}
+#burger{
+    display: none; /*to hide the checkbox*/
+}
+
+#burgerLogo{
+    cursor: pointer;
+    background:#01767f ;
+    width: 200px;
+    display: block;
+    color:#f9f4d6 ;
+    /* Pour que le menu hamburger s'affiche toujours*/
+    text-align: right;
+    /* Pour que le menu hamburger soit "rangé" par défaut */
+    transform: translateX(-168px);
+    padding: 10px;    
+    
+}
+
+.linksBurgerMenu{
+    display: flex;
+    flex-direction: column;
+    background: #01767f;
+    overflow: hidden;
+    width: 200px;
+    transform: translateX(-200px);
+}
+
+.linksBurgerMenu a {
+    color: #dc6023;
+     text-decoration: none;
+     padding: 10px;
+   }
+
+.linksBurgerMenu a:hover{
+    background: #f9f4d6;
+}  
+
+#burgerLogo,
+.linksBurgerMenu{
+    transition: 0.7s;
+}
+
+#burger:checked ~ #burgerLogo,
+#burger:checked ~ .linksBurgerMenu{
+    transform: translateX(0);
+}
+
+/*----------END BURGER MENU----------*/
+
+/*-------------------------END HEADER-----------------------*/
+
+
+/*-------------------------MAIN-----------------------*/
+.backgroundContact h3{
+        color: #01767f;
+        font-family: 'Merienda' , cursive;
+        font-size: 200%;
+        margin-inline: 20%;
+        margin-top: 10%;
+}
+.blueLine{
+        width: 35%;
+        position: absolute;
+        z-index: -1;
+        margin-inline: 7%;
+}
+.organiseContactForm{
+    display: flex;
+    justify-content: center;
+}
+
+form { 
+    max-width:420px; margin:50px auto; 
+}
+
+label{
+    color: #dc6023;
+}
+
+::placeholder{
+    color:#01767f;
+}
+.feedBack-input {
+    color:#01767f;
+    font-weight:500;
+    font-size: 18px;
+    border-radius: 5px;
+    line-height: 22px;
+    background-color: transparent;
+    border:2px solid #dc6023;
+    transition: all 0.3s;
+    padding: 13px;
+    margin-bottom: 15px;
+    width:100%;
+    box-sizing: border-box;
+    outline:0;
+  }
+  
+.feedBack-input:focus { 
+    border:2px solid #dc6023; 
+    color:#01767f;
+}
+
+textarea {
+    height: 150px;
+    line-height: 150%;
+    resize:vertical;
+}
+  
+[type="submit"] {
+    width: 100%;
+    background:#dc6023;
+    border-radius:5px;
+    border:0;
+    cursor:pointer;
+    color:#f9f4d6;
+    font-size:24px;
+    padding-top:10px;
+    padding-bottom:10px;
+    transition: all 0.3s;
+    margin-top:-4px;
+    font-weight:700;
+}
+  [type="submit"]:hover { 
+    background:#01767f; 
+}  
+
+.sizeAncre{
+    width: 5%;
+    z-index: 3;
+    POSITION: absolute;
+    margin-left: -78px;
+    margin-top: 109px;
+}
+
+.placeAncre{
+    display: flex;
+    justify-content: flex-end;
+}
+/*-----------------------END MAIN--------------------*/
+
+/*---------------------FOOTER----------------------*/
+.backgroundFooter{
+    background-color: #f9f4d6;
+    height: 152px;
+}
+
+
+.socialNetworkLogo{
+    width: 40px;
+}
+
+.footerContainerTop{
+    display: flex;
+    justify-content: center;
+    margin-top: 180px;
+}
+
+.footerContainerTop a{
+    padding: 20px;
+}
+
+.footerContainerBottom{
+    color: #dc6023;
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+.logoFooter{
+    width: 55px;
+    margin-top: -15px;
+    padding: 10px;
+}
+
+.legalNotice{
+    display: flex;
+    justify-content: flex-end;
+    font-size: 65%;
+    text-decoration: none;
+    color: #01767f;  
+}
+
+/*-------------------END FOOTER--------------------*/
+
+
+
+
+/*--------------RESPONSIVE MEDIA QUERY---------------*/
+@media screen and (max-width: 800px){
+
+    /* -----------HEADER--------- */
+    .navBar{
+        display: none;
+    }
+    .burgerMenu{
+        display: block;
+        margin-top: -165px
+    } 
+   .moveLogo{
+    position: absolute;
+    z-index: 2;
+    margin-inline: 665px;
+   }
+
+   .logo{
+    width: 5em;
+    height: 5em;
+   }
+    /* --------END HEADER------ */
+
+    .backgroundContact{
+        margin-top: 165px;
+    }
+    .blueLine {
+        margin-inline: 12%;
+        margin-top: 1%;
+    }
+
+}
+
+@media screen and (max-width: 429px){
+    .backgroundContact{
+        margin-left: 43px;
+        margin-right: 40px;
+    }
+
+ 
+    .moveLogo{
+        position: absolute;
+        z-index: 2;
+        margin-inline: 295px;
+    }
+
+    .logo{
+    width: 5em;
+    height: 5em;
+    }
+
+    .blueLine {
+        width: 65%;
+        margin-top: 5%;
+    }
+}

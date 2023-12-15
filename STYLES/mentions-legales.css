@@ -1,0 +1,14 @@
+*{/*selecteur universel définit le style global sur l'intégralité de la page peu importe le navigateur*/
+    margin: 0; /*marge extérieure de la boîte*/
+    padding: 0; /*marge intérieure de la boîte*/
+    box-sizing: border-box; /* indique que l'on va inclure les marges internes et bordure dans la taille des parents*/
+    font-family: poppins;
+}
+
+.test{
+    border: 1px solid black;
+    color: rgb(47, 47, 209);
+    display: flex;
+    text-align: justify;
+}
+

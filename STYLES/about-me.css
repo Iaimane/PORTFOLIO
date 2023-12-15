@@ -1,0 +1,366 @@
+*{/*selecteur universel définit le style global sur l'intégralité de la page peu importe le navigateur*/
+    margin: 0; /*marge extérieure de la boîte*/
+    padding: 0; /*marge intérieure de la boîte*/
+    box-sizing: border-box; /* indique que l'on va inclure les marges internes et bordure dans la taille des parents*/
+  
+}  
+
+header,footer{
+    font-family: 'Merienda', cursive;
+}
+body{
+    font-family: poppins;
+}
+.parallax{
+    background-image: url("../IMAGES/desertSunset.png") /*défini mon image de fond*/;
+    height: 100%;/*permet de dire de remplir 100% du conteneur ici le body*/
+    background-attachment: fixed;/*fixe l'image au moment du scroll*/
+    background-position: center;/*centre l'image*/
+    background-repeat: no-repeat;/*empêche la répétition de l'image*/
+    background-size: cover;/*redimensionne l'image  pour couvrir l'intégralité de l'élément*/
+}
+/*------------------------HEADER--------------------*/
+.logo{
+    width: 6em;
+    height: 6em;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: #DC6023;
+}
+
+nav ul li{ /*acting directly and only on these elements not the box*/
+    display: inline;
+    margin-right: 50px; /*space between my links*/
+    margin-left: 50px;
+    
+}
+.navBar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;    
+    padding: 20px;
+}
+
+.links{
+    margin: 0px 0px 20px 160px; /*margin between my logo and the links to create a space between them*/
+}
+
+/*----------BURGER MENU----------*/
+.burgerMenu{
+    position: fixed;
+    width: 0px;
+    display: none;
+}
+#burger{
+    display: none; /*to hide the checkbox*/
+}
+
+#burgerLogo{
+    cursor: pointer;
+    background:#01767f ;
+    width: 200px;
+    display: block;
+    color:#f9f4d6 ;
+    /* Pour que le menu hamburger s'affiche toujours*/
+    text-align: right;
+    /* Pour que le menu hamburger soit "rangé" par défaut */
+    transform: translateX(-168px);
+    padding: 10px;    
+    
+}
+
+.linksBurgerMenu{
+    display: flex;
+    flex-direction: column;
+    background: #01767f;
+    overflow: hidden;
+    width: 200px;
+    transform: translateX(-200px);
+}
+
+.linksBurgerMenu a {
+    color: #dc6023;
+     text-decoration: none;
+     padding: 10px;
+   }
+
+.linksBurgerMenu a:hover{
+    background: #f9f4d6;
+}  
+
+#burgerLogo,
+.linksBurgerMenu{
+    transition: 0.7s;
+}
+
+#burger:checked ~ #burgerLogo,
+#burger:checked ~ .linksBurgerMenu{
+    transform: translateX(0);
+}
+
+/*----------END BURGER MENU----------*/
+
+/*-------------------------END HEADER-----------------------*/
+
+/*-------------------------END HEADER-----------------------*/
+/*---------------------MAIN----------------------*/
+.backgroundAboutMe{
+    background-color: white;
+    margin-left: 82px;
+    margin-right: 190px;
+    margin-top: 60px;
+    height: 790px;
+    
+}
+.imageDesert{
+    height: 400px;
+    width: 500px;
+    opacity: 0.5;
+    margin-left: 870px;
+    margin-bottom: 55px;
+}
+
+.h3AboutMe{
+    font-family: 'Merienda' , cursive;
+    margin-left: 4%;
+    padding: 2%;
+}
+
+.blueLine{
+    width: 25%;  
+}
+
+
+.textImage{
+    position: relative;
+}
+.organiseText{
+    text-align: justify;
+    line-height: 180%;
+    position: absolute;
+    margin-top: 2%;
+    margin-right: 36%;
+    margin-left: 6%;
+}
+
+.buttonContact a{
+    text-decoration: none;
+    color: #f9f4d6;
+    font-family: 'Merienda', cursive;
+}
+.buttonContact{
+    z-index: 4;
+    position: absolute;
+    margin-top: 490px;
+    margin-left: 300px;
+    width: 155px;
+    height: 55px;
+    border: transparent;
+    background-color: #01767f;
+    border-radius: 25% 82% 0% 75% / 0% 100% 0% 100%;
+}
+
+.buttonResume{
+    z-index: 4;
+    position: absolute;
+    margin-top: 40%;
+    margin-left: 75%;
+    color:#01767f;
+    font-family: 'Merienda', cursive;
+    text-align: center;
+}
+.sizeButtonResume{
+    width: 33%;
+}
+
+.sizeButtonResume, a{
+    text-decoration: none;
+}
+
+
+.sizeAncre{
+    width: 5%;
+    z-index: 3;
+    POSITION: absolute;
+    margin-left: -78px;
+    margin-top: 105px;
+}
+
+
+.placeAncre{
+    display: flex;
+    justify-content: flex-end;
+}
+/*-------------------END MAIN--------------------*/
+
+
+/*---------------------FOOTER----------------------*/
+.backgroundFooter{
+    background-color: #f9f4d6;
+    height: 152px;
+}
+
+
+.socialNetworkLogo{
+    width: 40px;
+}
+
+.footerContainerTop{
+    display: flex;
+    justify-content: center;
+    margin-top: 180px;
+}
+
+.footerContainerTop a{
+    padding: 20px;
+}
+
+.footerContainerBottom{
+    color: #dc6023;
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+.logoFooter{
+    width: 55px;
+    margin-top: -15px;
+    padding: 10px;
+}
+
+.legalNotice{
+    display: flex;
+    justify-content: flex-end;
+    font-size: 65%;
+    text-decoration: none;
+    color: #f9f4d6;  
+}
+
+/*-------------------END FOOTER--------------------*/
+
+/*--------------RESPONSIVE MEDIA QUERY---------------*/
+
+@media screen and (max-width: 800px){
+
+
+    /* -----------HEADER--------- */
+    .navBar{
+        display: none;
+    }
+    .burgerMenu{
+        display: block;
+        margin-top: -80px;
+    }  
+    .moveLogo{
+        position: absolute;
+        z-index: 2;
+        margin-inline: 680px;
+       }
+    
+       .logo{
+        width: 5em;
+        height: 5em;
+       }
+
+    .backgroundAboutMe {
+        margin-right: 80px;
+        margin-top: 80px;
+        height: 1120px;
+    }
+    .buttonContact{
+        margin-top: 860px;
+        margin-left: 125px;
+        width: 130px;
+        height: 45px;
+    }
+    .buttonResume{
+        margin-top: 155%;
+        margin-left: 75%;
+    }
+
+    
+/* --------END HEADER------ */
+
+/* --------MAIN------ */
+.imageDesert {
+    width: 265px;
+    margin-left: 410px;
+}
+
+/* --------END MAIN------ */
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 429px){
+
+/* -----------HEADER--------- */    
+    .burgerMenu{
+        margin-top: -16px;
+    }
+
+    #burgerLogo{
+        margin-top: -64px;
+    }
+
+     
+    .moveLogo{
+        position: absolute;
+        z-index: 2;
+        margin-inline: 295px;
+        margin-top: -65px;
+    }
+
+    .logo{
+    width: 5em;
+    height: 5em;
+    }
+/* --------END HEADER------ */
+
+
+.backgroundAboutMe {
+        margin-right: 25px;
+        margin-left: 25px;
+        height: 1485px;
+}
+
+.blueLine {
+    width: 45%;
+}
+
+.organiseText{
+    margin-right: 10%;
+    margin-left: 6%;
+}
+
+.buttonContact{
+    margin-top: 1015px;
+    margin-left: 155px;
+}
+.sizeButtonResume {
+    width: 25%;
+}
+.buttonResume {
+    margin-top: 393%;
+    margin-left: 30%;
+}
+.imageDesert {
+    width: 261px;
+    height: 290px;
+    margin-left: 40px;
+    margin-top: 1076px;
+}
+
+.sizeAncre {
+    width: 10%;
+    margin-left: -55px;
+    margin-top: 115px;
+}
+
+}

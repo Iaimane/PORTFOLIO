@@ -1,0 +1,449 @@
+*{/*selecteur universel définit le style global sur l'intégralité de la page peu importe le navigateur*/
+    margin: 0; /*marge extérieure de la boîte*/
+    padding: 0; /*marge intérieure de la boîte*/
+    box-sizing: border-box; /* indique que l'on va inclure les marges internes et bordure dans la taille des parents*/
+  
+}  
+
+header,footer{
+    font-family: 'Merienda', cursive;
+}
+body{
+    font-family: poppins;
+}
+
+/*------------------------HEADER--------------------*/
+.logo{
+    width: 6em;
+    height: 6em;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: #DC6023;
+}
+
+nav ul li{ /*acting directly and only on these elements not the box*/
+    display: inline;
+    margin-right: 50px; /*space between my links*/
+    margin-left: 50px;
+    
+}
+.navBar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;    
+    padding: 20px;
+}
+
+.links{
+    margin: 0px 0px 20px 160px; /*margin between my logo and the links to create a space between them*/
+}
+
+/*----------BURGER MENU----------*/
+.burgerMenu{
+    position: fixed;
+    width: 0px;
+    display: none;
+}
+#burger{
+    display: none; /*to hide the checkbox*/
+}
+
+#burgerLogo{
+    cursor: pointer;
+    background:#01767f ;
+    width: 200px;
+    display: block;
+    color:#f9f4d6 ;
+    /* Pour que le menu hamburger s'affiche toujours*/
+    text-align: right;
+    /* Pour que le menu hamburger soit "rangé" par défaut */
+    transform: translateX(-168px);
+    padding: 10px;    
+    
+}
+
+.linksBurgerMenu{
+    display: flex;
+    flex-direction: column;
+    background: #01767f;
+    overflow: hidden;
+    width: 200px;
+    transform: translateX(-200px);
+}
+
+.linksBurgerMenu a {
+    color: #dc6023;
+     text-decoration: none;
+     padding: 10px;
+   }
+
+.linksBurgerMenu a:hover{
+    background: #f9f4d6;
+}  
+
+#burgerLogo,
+.linksBurgerMenu{
+    transition: 0.7s;
+}
+
+#burger:checked ~ #burgerLogo,
+#burger:checked ~ .linksBurgerMenu{
+    transform: translateX(0);
+}
+
+/*----------END BURGER MENU----------*/
+
+/*-------------------------END HEADER-----------------------*/
+
+
+
+
+/*-------------------------MAIN---------------------------*/
+
+
+/*-----------First section----------*/
+
+.organiseFirstSection{
+    display: flex;
+    flex-direction: row-reverse; /*inverser la position de l'image et du texte */
+    justify-content: space-between;
+    margin-bottom: 7%;
+}
+
+.backgroundImage{
+    width: 45%; /*largeur de l'image*/
+    height: 75%; /*hauteur de l'image*/ 
+    position: relative;
+    z-index: 1;
+}
+
+.imageAnimation{
+    border-radius: 50%;
+    position: absolute;
+    z-index: 2;
+    left: 38%;
+    top: 350px;
+    height: 30em;
+    opacity: 0.5;
+}
+
+@keyframes imageAnimation{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+.imageAnimation{
+    animation: imageAnimation 180s linear infinite;
+}
+
+.logoAnime{
+    position: absolute;
+    z-index: 3;
+    margin-top: -680px;
+    margin-left: 680px;
+}
+
+
+.textFirstSection{
+    padding: 60px;
+    margin-right: 230px;
+    text-align: justify;
+}
+.textFirstSectionMobile{
+    display: none;
+}
+
+.buttonMoreMobile{
+    display: none;
+}
+
+.linksFirstSection{
+    text-decoration: none;
+    color: #dc6023;
+    font-family: 'Merienda', cursive;
+}
+
+.titleSectionOne{
+    padding: 10%;
+    font-family: 'Merienda', cursive;
+}
+
+.buttonMore a{
+    text-decoration: none;
+    color: #f9f4d6;
+    font-family: 'Merienda', cursive;
+}
+.buttonMore{
+    z-index: 4;
+    position: absolute;
+    margin-top: -545px;
+    margin-left: 180px;
+    width: 155px;
+    height: 55px;
+    border: transparent;
+    background-color: #01767f;
+    border-radius: 25% 82% 0% 75% / 0% 100% 0% 100%;
+}
+
+/*-----------End First section----------*/
+
+
+/*------------Second section-----------*/
+
+
+.textSecondSection{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Merienda', cursive;
+}
+
+.alifRenverse{
+    /*width: 50%;*/
+    margin-inline: 30%;
+    margin-bottom: -4%;
+}
+
+.sizeAncre{
+    width: 5%;
+    z-index: 3;
+    POSITION: absolute;
+    margin-left: -78px;
+    margin-top: -10px;
+}
+
+.placeAncre{
+    display: flex;
+    justify-content: flex-end;
+}
+/*----------End Second section---------*/
+
+
+
+/*----------------------END MAIN---------------------*/
+
+
+/*---------------------FOOTER----------------------*/
+.backgroundFooter{
+    background-color: #f9f4d6;
+    height: 152px;
+}
+
+
+.socialNetworkLogo{
+    width: 40px;
+}
+
+.footerContainerTop{
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+.footerContainerTop a{
+    padding: 20px;
+}
+
+.footerContainerBottom{
+    color: #dc6023;
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+.logoFooter{
+    width: 55px;
+    margin-top: -15px;
+    padding: 10px;
+}
+
+.legalNotice{
+    display: flex;
+    justify-content: flex-end;
+    font-size: 65%;
+    text-decoration: none;
+    color: #01767f;  
+}
+
+/*-------------------END FOOTER--------------------*/
+
+
+/*--------------RESPONSIVE MEDIA QUERY---------------*/
+
+@media screen and (max-width: 800px){ /*ici j'agis sur la version tablette/mobile, je ne veux pas que la nav du hearder apparaisse
+    /*insererz vos propriétés CSS ici, avec vos selecteurs. ici ceka signifie que sur tout le css ecrit
+    ne sera appliqué que pour les écrans dont la taille est égale ou inférieure à 800 pixels
+    media screen end signifie on va initier les médias query*/
+
+
+    /* -----------HEADER--------- */
+    .navBar{
+        display: none;
+    }
+    .burgerMenu{
+        display: block;
+    }  
+    /* --------END HEADER------ */
+
+    /* -----------MAIN--------- */
+    .organiseFirstSection{
+        margin-bottom: 6%;
+    }
+
+    .imageAnimation {
+        left: 38%;
+        top: 82px;
+        height: 16em;
+    }
+
+    .logoAnime{
+        margin-top: -383px;
+        margin-left: 363px;
+        width: 16%;
+    }
+    
+
+    .textFirstSection{
+        padding: 80px;
+        margin-right: 55px;
+        margin-left: -35px;
+        margin-top: -80px;
+    }
+
+    .buttonMore{
+        margin-top: -95px;
+        margin-left: 96px;
+        width: 130px;
+        height: 40px;
+    }
+
+    .buttonMore a{
+        font-size: 70%;
+    }
+
+    .organiseSecondSection{
+         margin-bottom: -42px;
+    }
+    
+
+    .alifRenverse{
+        margin-inline: 9%;
+        margin-bottom: -8%;
+    }
+
+    .sizeAncre {
+        width: 6%;
+        z-index: 3;
+        POSITION: absolute;
+        margin-left: -48px; 
+    }
+
+    /* --------END MAIN------- */
+}
+
+
+@media screen and (max-width: 429px){
+    .burgerMenu{
+        margin-top: -16px;
+    }
+    .organiseFirstSection{
+        margin-top: 15px;
+    }
+    
+    .titleSectionOne{
+        padding: 10%;
+        font-size: 114%;
+    }
+    
+    .textFirstSection{
+        /*margin-top: 11px;
+        margin-left: 30px;
+        padding: 0px;
+        font-size: 47%;*/
+        display: none;
+    }
+    .textFirstSectionMobile{
+        display: block;
+        padding: 14px;
+        text-align: justify;
+    }
+
+    .buttonMoreMobile{
+        display: block;
+        width: 130px;
+        height: 40px;
+        border: transparent;
+        background-color: #01767f;
+        border-radius: 25% 82% 0% 75% / 0% 100% 0% 100%;
+        margin: auto;
+        margin-top: 25px;
+    }
+
+    .buttonMoreMobile a{
+        text-decoration: none;
+        color: #f9f4d6;
+        font-family: 'Merienda' , cursive; 
+        font-size: 60%;
+    }
+
+    .backgroundImage{
+        margin-left: 53px;
+        margin-right: 30px;
+        width: 60%;
+    
+    }
+    .imageAnimation{
+        left: 1%;
+        top: 61px;
+        height: 15em;
+    }
+    .logoAnime{
+        margin-top: -226px;
+        margin-left: 56px;
+        width: 32%;;
+    }
+    
+    .buttonMore{
+        margin-top: -45px;
+        margin-left: 50px;
+        width: 105px;
+        height: 25px;
+        display: none;
+    }
+
+    .buttonMore a{
+        font-size: 60%;
+    }
+
+    .organiseSecondSection{
+        margin-top: 60px;
+        margin-bottom: -4px;
+    }
+
+    .sizeAlif{
+        width: 94%;
+    }
+
+    .textSecondSection{
+        font-size: 10px;
+    }
+    .sizeAncre{
+        margin-left: -32px;
+        margin-top: 40px;
+
+    }
+}    
+
+
+
+
+
+
+
+
